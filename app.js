@@ -71,6 +71,7 @@ app.get('/api/allmaindata/:id?', function (req, res){
   connection.getConnection(function(err,con){
     if(err){
       console.log('ERROR OCCURED !  ' + err);
+      res.status(500).send({ error: 'no-connected' });
     }
     else{
       var cid = req.query.customerid;
