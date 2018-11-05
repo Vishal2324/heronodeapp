@@ -1389,7 +1389,7 @@ app.post('/api/bookroomhome/:id?', function (req, res){
   })
 });
 
-//app.use(express.static(path.resolve(__dirname,'./react_spa/build')));
+app.use(express.static(path.resolve(__dirname,'./react_spa/build')));
 
 // app.get('/api/auth',function(req, res){
 //   var auth = req.headers['x-access-token'];
@@ -1407,9 +1407,8 @@ app.post('/api/bookroomhome/:id?', function (req, res){
 
 app.get('*',function(req, res){
   // var token = jwt.sign({ id: con.customerid }, con.secret, {});
-  console.log('yes it is working');
-  res.json({'working' : 'yes it is working'});
-  //res.sendFile(path.resolve(__dirname,'./react_spa/build','index.html'));
+  //res.json({'working' : 'yes it is working'});
+  res.sendFile(path.resolve(__dirname,'./react_spa/build','index.html'));
 });
 
 // app.get('/',function(req, res){
