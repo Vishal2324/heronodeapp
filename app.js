@@ -20,7 +20,7 @@ var sendgrid = new Sendgrid({
 });
 
 var googleMapsClient = require('@google/maps').createClient({
-  key: 'AIzaSyBldGmCaHXdYxOgjlHiwnEMV0EzD3Vt5iU'
+  key: 'AIzaSyAQG3K0vh14QTE4zz2WCNLhRDv29sdnF74'
 });
 
 // var connection = mysql.createPool({
