@@ -1,19 +1,37 @@
 {
-"name": "heronodeapp",
-"version": "1.0.0",
-"description": "node app ",
-"main": "app.js",
-"scripts": {
-"start": "node app.js"
-},
-"repository": {
-"type": "git",
-"url": ""
-},
-"author": "",
-"license": "ISC",
-"bugs": {
-"url": ""
-},
-"homepage": ""
+  "name": "reactapi",
+  "version": "1.0.0",
+  "description": "express api setup",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "vishal",
+  "license": "MIT",
+  "dependencies": {
+    "@google/maps": "^0.4.6",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dates-between": "^1.1.0",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0",
+    "forever-monitor": "^1.7.1",
+    "jsonwebtoken": "^8.2.1",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0",
+    "nocache": "^2.0.0",
+    "querystring": "^0.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-scroll-to-component": "^1.0.2",
+    "sendgrid-web": "0.0.5",
+    "uniqid": "^5.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "morgan": "^1.9.0"
+  },
+  "keywords": [
+    "heroku"
+  ]
 }
