@@ -112,19 +112,19 @@ app.get('/api/allhomedata/:id?', function (req, res){
             console.log(error);
           }
           else{
-              googleMapsClient.geocode({
-                  address: results[2][0].companyName + ' , ' + results[2][0].address
-                }, function(err, response) {
-                  if (!err) {
-                    var latitude = response.json.results[0].geometry.location.lat;
-                    var longitude = response.json.results[0].geometry.location.lng;
-                    res.status(200).send({homeslider : results[0] , metatags : results[1] , admin : { data :results[2][0] , lat : latitude , long : longitude} , homecontent : results[3][0] , awards : results[4] , reviews : results[5] , tripadvisor : results[6][0] , property : results[7][0] , roomcontent : results[8] , roomcontentpara : results[9][0]});
-                }
-                  else{
-                    console.log(errors);
-                    res.status(500).send({ error : errors });
-                  }
-              });
+              // googleMapsClient.geocode({
+              //     address: results[2][0].companyName + ' , ' + results[2][0].address
+              //   }, function(err, response) {
+              //     if (!err) {
+              //       var latitude = response.json.results[0].geometry.location.lat;
+              //       var longitude = response.json.results[0].geometry.location.lng;
+                    res.status(200).send({homeslider : results[0] , metatags : results[1] , admin : { data :results[2][0] , lat : "latitude" , long : "longitude"} , homecontent : results[3][0] , awards : results[4] , reviews : results[5] , tripadvisor : results[6][0] , property : results[7][0] , roomcontent : results[8] , roomcontentpara : results[9][0]});
+              //   }
+              //     else{
+              //       console.log(errors);
+              //       res.status(500).send({ error : errors });
+              //     }
+              // });
           }  
           con.release();
         });
